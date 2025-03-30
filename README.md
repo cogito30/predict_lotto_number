@@ -20,6 +20,10 @@ conda activate py13
 ```
 pip install pytest
 ```
+- test
+```
+pytest test/test_lotto_generator.py
+```
 
 ## Develope Environment
 - MacOS(M2)

@@ -1,8 +1,11 @@
 import os
-import pytest
 import sys
-sys.path.append("..")
-from src.lotto_generator import generate_lotto_numbers, save_to_file, load_existing_numbers
+import pytest
+
+# src 디렉터리를 모듈 경로에 추가
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
+
+from lotto_generator import generate_lotto_numbers, save_to_file, load_existing_numbers
 
 @pytest.mark.parametrize("trials", [1, 5, 10])
 def test_generate_lotto_numbers(trials):
